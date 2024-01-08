@@ -129,6 +129,7 @@ body {
   }
 
   .big-figure::before {
+    border-radius: 5px;
     content: "";
     position: absolute;
     top: -5px;
@@ -171,15 +172,66 @@ body {
     margin-bottom: 0px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    
   }
 
-  .general-class {
-    flex-basis: 48%;
-    margin: 1% 1% 0 0;
+  div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  figure.general-class {
+    position: relative;
+    border: 5px solid black;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px;
+    width: 500px;
+    height: 300px;
     box-sizing: border-box;
-    background-color: firebrick;
-  }
+    }
 
-  .general-class nav {
-    font-size: 80%;
-  }
+    #img-1 {
+      width: 500px; 
+      height: 300px; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(./Assets/Prework\ Study\ Guide.png);
+    }
+
+    #img-2 {
+      width: 500px; 
+      height: 300px; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(./Assets/example\ image.jpg);
+    }
+
+    #img-3 {
+      width: 500px; 
+      height: 300px; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(./Assets/example\ image.jpg);
+    }
+
+    #img-4 {
+      width: 500px; 
+      height: 300px; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(./Assets/example\ image.jpg);
+    }
+
+    .general-class p.text-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      padding: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: rgb(0, 0, 0);
+      color: #fff
+    }
