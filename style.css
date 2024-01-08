@@ -72,16 +72,6 @@ body {
     text-decoration: underline;
   }
 
-  /* main {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 0;
-    max-width: 96%;
-    margin: 2% auto;
-    max-width: 1200px;
-    flex: 1;
-  } */
-
   main {
     display: flex;
     flex-wrap: wrap;
@@ -89,16 +79,8 @@ body {
     margin: 2% auto;
   }
   
-  /* section {
-    flex:1;
-    padding: 20px;
-    position: absolute;
-    left: 0;
-    margin: 10px;
-  } */
-
   section {
-    background-color: aqua;
+    max-width: 14%;
     flex: 1;
     padding-right: 15px;
   }
@@ -111,6 +93,8 @@ body {
 
   }
 
+  /*Got dificulties with doing a side part that allings the topics of the right, and have a line to indicate that topic; so desided to use Selector Specificity
+  for the <article p> sections*/
   #about-me {
     display: flex;
     align-items: center;
@@ -119,7 +103,7 @@ body {
 
   #about-me:after {
     background: rgb(9, 0, 75);
-    height: 1180px;
+    height: 1130px;
     max-width: 2%;
     margin-left: 20px;
     flex: 1;
@@ -140,7 +124,7 @@ body {
 
   #work-1:after {
     background: rgb(9, 0, 75);
-    height: 1180px;
+    height: 1390px;
     max-width: 2%;
     margin-left: 20px;
     flex: 1;
@@ -152,6 +136,29 @@ body {
   }
 
   #work-1.right:before {
+    background: none;
+  }
+
+  #contact-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact-1:after {
+    background: rgb(9, 0, 75);
+    height: 50px;
+    max-width: 2%;
+    margin-left: 1%;
+    flex: 1;
+    content: '';
+  }
+
+  #contact-1.left:after {
+    background: none;
+  }
+
+  #contact-1.right:before {
     background: none;
   }
 
