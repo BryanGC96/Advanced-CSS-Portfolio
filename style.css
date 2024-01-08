@@ -1,4 +1,5 @@
 body {
+  display: flex;
     flex-direction: column;
     line-height: 1.2;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     max-width: 100%;
   }
   html, body {
+    scroll-behavior: smooth;
     width: 100%;
     height: 100%;
   }
@@ -61,7 +63,16 @@ body {
     font-size: 180%;
   }
 
-  main {
+  ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* main {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 0;
@@ -69,37 +80,99 @@ body {
     margin: 2% auto;
     max-width: 1200px;
     flex: 1;
+  } */
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2% auto;
   }
   
-  section {
+  /* section {
     flex:1;
     padding: 20px;
     position: absolute;
     left: 0;
     margin: 10px;
+  } */
+
+  section {
+    background-color: aqua;
+    flex: 1;
+    padding-right: 15px;
   }
 
   article {
     display: flex;
     flex-direction: column;
-    border-right: 10px solid #102378;
     padding-right: 20px;
     font-size: 30px;
+
   }
-  
-  .about-me {
-    margin-bottom: 1100px;
+
+  #about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #about-me:after {
+    background: rgb(9, 0, 75);
+    height: 1180px;
+    max-width: 2%;
+    margin-left: 20px;
+    flex: 1;
+    content: '';
+  }
+  #about-me.left:after {
+    background: none;
+  }
+  #about-me.right:before {
+    background: none;
+  }
+
+  #work-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #work-1:after {
+    background: rgb(9, 0, 75);
+    height: 1180px;
+    max-width: 2%;
+    margin-left: 20px;
+    flex: 1;
+    content: '';
+  }
+
+  #work-1.left:after {
+    background: none;
+  }
+
+  #work-1.right:before {
+    background: none;
   }
 
   footer {
+    font-size: 40px;
     display: flex;
     justify-content: center;
-    padding: 2%;
-    background-color: #13293d;
+    padding: 10px;
+    background-color: rgb(128, 79, 207);
     color: #fff;
   }
   
+  /* aside {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  } */
+
   aside {
+    width: 85%;
     display: flex;
     flex-direction: column;
     font-size: 30px;
@@ -193,6 +266,21 @@ body {
     box-sizing: border-box;
     }
 
+    /*because the images are used as background for the containers, and im not using JavaScript; i was forced to use this to link the images to my URLS*/
+    aside figure.big-figure a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      text-decoration: none;
+    }
+
+    aside figure.big-figure a:hover {
+      background-color: rgba(0, 0, 255, 0.5);
+    }
+
     #img-1 {
       width: 500px; 
       height: 300px; 
@@ -234,4 +322,40 @@ body {
       padding-right: 15px;
       background-color: rgb(0, 0, 0);
       color: #fff
+    }
+
+    .top-of-footer {
+      flex: auto;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+
+    .top-of-footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .top-of-footer a:hover {
+      text-decoration: underline;
+      color: silver;
+    }
+
+    /*because the images are used as background for the containers, and im not using JavaScript; i was forced to use this to link the images to my URLS*/
+    div figure a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      text-decoration: none;
+    }
+
+    div figure a:hover {
+      background-color: rgba(0, 0, 255, 0.5);
     }
